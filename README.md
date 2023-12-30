@@ -1,6 +1,6 @@
 # Shadow Drive Swift Packaage
 
-![Shadow Drive GenesysGo API](ShadowAPIs.png)
+![Shadow Drive GenesysGo API](https://github.com/denizTutuncu/ShadowDriveSwiftPackage/blob/main/Media/ShadowAPIs.png?raw=true)
 
 Introducing the Shadow Drive Swift Package Project
 
@@ -140,7 +140,7 @@ Given the customer doesn't have connectivity
 
 ## Flowchart
 
-![New Storage Creating Feature](NewStorageFlowchart.drawio.png)
+![Create new storage flowchart](https://github.com/denizTutuncu/ShadowDriveSwiftPackage/blob/main/Media/NewStorageFlowchart.drawio.png?raw=true)
 
 ## Model Specs
 
@@ -172,4 +172,5 @@ Other APIs ...
 
 ## App Architecture
 
-![](ShadowDrive.drawio.png)
+![App Architecture](https://github.com/denizTutuncu/ShadowDriveSwiftPackage/blob/main/Media/ShadowDrive.drawio.png?raw=true)
+
