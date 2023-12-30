@@ -11,14 +11,14 @@ import ShadowDriveCore
 class NewStorageTransactionItemMapperTests: XCTestCase {
     
     func test_map_throwsErrorOnNewStorageTransactionWithEmptyInstructions() throws {
-        let emptyNewStorageTransaction = makeNewStorageTransaction(instructions: [], recentBlockhash: Data())
+        let emptyNewStorageTransaction = makeNewStorageTransaction(instructions: [])
         XCTAssertThrowsError(
             try NewStorageTransactionItemMapper.map(emptyNewStorageTransaction.model)
         )
     }
     
     func test_map_deliversNewStorageTransactionWithInstructions() throws {
-        let validNewStorageTransaction = makeNewStorageTransaction(instructions: [Data(), Data()], recentBlockhash: Data())
+        let validNewStorageTransaction = makeNewStorageTransaction(instructions: [Data(), Data()])
         let model = validNewStorageTransaction.model
         let data = validNewStorageTransaction.data
         
@@ -27,8 +27,8 @@ class NewStorageTransactionItemMapperTests: XCTestCase {
         XCTAssertEqual(result, data)
     }
     
-    private func makeNewStorageTransaction(instructions: [Data], recentBlockhash: Data)  -> (model: NewStorageTransaction, data: Data) {
-        let model = NewStorageTransaction(instructions: instructions, recentBlockhash: recentBlockhash)
+    private func makeNewStorageTransaction(instructions: [Data])  -> (model: NewStorageTransaction, data: Data) {
+        let model = NewStorageTransaction(instructions: instructions)
         
         let data = makeData(model)
         
