@@ -21,18 +21,6 @@ public enum NewStorageEndpoint {
             var request = URLRequest(url: components.url!)
             request.httpMethod = "POST"
             
-            struct PostNewStorageTransactionBody: Encodable {
-                private let transaction: RemoteNewStorageTransaction
-                
-                struct RemoteNewStorageTransaction: Encodable {
-                      let instructions: [Data]
-                      let recentBlockhash: Data
-                }
-                
-                init(transaction: RemoteNewStorageTransaction) {
-                    self.transaction = transaction
-                }
-            }
             
             let newStorageTransactionData = try NewStorageTransactionItemMapper.map(newStroageTransaction)
             request.httpBody = newStorageTransactionData

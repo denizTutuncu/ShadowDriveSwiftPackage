@@ -15,11 +15,11 @@ extension HTTPURLResponse {
 }
 
 func unvalidNewStorageTransaction() -> NewStorageTransaction {
-    return NewStorageTransaction(instructions: [], recentBlockhash: Data())
+    return NewStorageTransaction(instructions: [])
 }
 
 func validTransaction() -> NewStorageTransaction {
-    return NewStorageTransaction(instructions: validInstructions(), recentBlockhash: Data())
+    return NewStorageTransaction(instructions: validInstructions())
 }
 
 private func validInstructions() -> [Data] {
